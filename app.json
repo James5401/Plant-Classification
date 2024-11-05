@@ -1,27 +1,57 @@
 {
   "expo": {
-    "name": "lifr",
-    "slug": "lifr",
+    "name": "EcoPest AI",
+    "slug": "live",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/mysplash.jpg",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "image": "./assets/mysplash.jpg",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.green",
+      "buildNumber": "1.0.0",
+      "config": {
+        "googleSignIn": {
+          "reservedClientId": "com.googleusercontent.apps.your-client-id"
+        }
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/mysplash.jpg",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "INTERNET",
+        "ACCESS_NETWORK_STATE",
+        "CAMERA",
+        "RECORD_AUDIO"
+      ],
+      "package": "com.green"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "PLANT_ID_API_KEY": "Z5YePylDAowH1iRneaHqYWQrfQShY5lnahxlvSMz8xgpsPPQ39",
+      "eas": {
+        "projectId": "eccceab8-df9e-4e05-a4ff-a7edc090f628"
+      }
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow live to access your camera",
+          "microphonePermission": "Allow live to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ]
+    ]
   }
 }
